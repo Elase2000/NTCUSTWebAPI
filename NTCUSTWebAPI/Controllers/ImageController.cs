@@ -16,8 +16,8 @@ namespace NTCUSTWebAPI.Controllers
     [RoutePrefix("Image")]
     public class ImageController : ApiController
     {
-        private string StorageConnectionString = "DefaultEndpointsProtocol=https;AccountName={0};AccountKey={1}";
-        private string BaseImageUrl = "https://{0}.blob.core.windows.net/00000000/";
+        private string StorageConnectionString = "DefaultEndpointsProtocol=https;AccountName=ntcuststorage;AccountKey=xRVwUoYpm8zb98bPZ7UMt2zqlOYkjctwygJLCBLe48Jd3vZNpxu6ypOjarb/mDVSsEWWJra1PDI18avSg2Dc0A==;EndpointSuffix=core.windows.net";
+        private string BaseImageUrl = "https://ntcuststorage.blob.core.windows.net/00000000/";
 
         [Route("")]
         public async Task<IHttpActionResult> Post()

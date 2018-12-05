@@ -46,11 +46,13 @@ namespace NTCUSTWebAPI.Controllers
             }
         }
 
-        [Route("")]
-        public IHttpActionResult Delete([FromBody] CustomerModel Customer)
+        [Route("{ID}")]
+        public IHttpActionResult Delete(string ID)
         {
             using (var conn = new SqlConnection(ConnectionString))
             {
+                CustomerModel Customer = conn.Get<CustomerModel>(ID);
+
                 conn.Delete<CustomerModel>(Customer);
                 return Ok();
             }
